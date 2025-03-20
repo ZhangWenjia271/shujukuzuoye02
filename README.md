@@ -1,13 +1,13 @@
 # shujukuzuoye02
 ### 题目一
 
-要在数据库中添加一个关系模式为 `users(name, pswd, gender)` 的表，并使用 `name` 作为主码，可以使用以下 `CREATE TABLE` 命令：
+要在数据库中添加一个关系模式为 `users(name, pswd, gender) `的表，并使用 `name` 作为主码，可以使用以下 `CREATE TABLE` 命令：
 
-CREATE TABLE users (  
-  name          varchar(16)   primary key,  
-  pswd          varchar(16),  
-  gender        char(1)  
-);
+ `CREATE TABLE users (  
+     name          varchar(16)   primary key,  
+     pswd          varchar(16),  
+     gender        char(1)  
+   ); `
 
 注释：
 - `gender` 使用 `char(1)` 表示单个字符（如 'M' 或 'F'）。
@@ -17,19 +17,19 @@ CREATE TABLE users (
 
 1. **找到在计算机学院开设的不少于3个学分的课程，并按学分进行升序排序。**
 
-SELECT title, credits  
-FROM course  
-WHERE dept_name = '计算机学院' AND credits >= 3  
-ORDER BY credits ASC;
+ `SELECT title, credits  
+  FROM course  
+  WHERE dept_name = '计算机学院' AND credits >= 3  
+  ORDER BY credits ASC; `
 
 
 2. **找到所有被名叫图灵的老师教过的学生的学号（ID），并确保结果没有重复。**
 
-SELECT DISTINCT takes.ID  
-FROM takes, teaches, instructor  
-WHERE takes.course_id = teaches.course_id  
-AND teaches.ID = instructor.ID  
-AND instructor.name = '图灵';
+ `SELECT DISTINCT takes.ID  
+  FROM takes, teaches, instructor  
+  WHERE takes.course_id = teaches.course_id  
+  AND teaches.ID = instructor.ID  
+  AND instructor.name = '图灵'; `
 
 
 ### 题目三
