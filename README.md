@@ -4,9 +4,9 @@
 要在数据库中添加一个关系模式为 `users(name, pswd, gender)` 的表，并使用 `name` 作为主码，可以使用以下 `CREATE TABLE` 命令：
 
 CREATE TABLE users (  
-    name          varchar(16)   primary key,  
-    pswd           varchar(16),  
-    gender        char(1)
+name          varchar(16)   primary key,  
+pswd           varchar(16),  
+gender        char(1)  
 );
 
 注释：
